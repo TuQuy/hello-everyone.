@@ -1180,6 +1180,19 @@ blockquote {
   font: normal var(--font-weight-medium) 1.8rem/10rem var(--_font-default);
   color: var(--t-opp-bright);
 }
+
+.btn-default {
+  width: 100%;
+  height: 10rem;
+  padding: 0 7.6rem;
+  -moz-border-radius: 5rem;
+  border-radius: 5rem;
+  border: 1px solid var(--neutral-bright);
+  background-color: #ffffff !important;
+  font: normal var(--font-weight-medium) 1.8rem/10rem var(--_font-default);
+  color: var(--t-opp-bright);
+}
+
 @media only screen and (min-width: 576px) {
   .btn-default {
     width: auto;
@@ -7045,14 +7058,33 @@ form textarea:required:valid {
   }
 }
 
-
 @media (max-width: 480px) {
   .btn-caption2 {
     font-size: 16px; /* mobile nhỏ hơn 480px */
   }
 }
+
+.img2 {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .img2 {
+    width: 250px ;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .img2 {
+    width: 100%;
+    height: 80px;
+  }
+}
+
 /* ------------------------------------------------*/
 /* Features Contact Data End */
 /* ------------------------------------------------*/
-
-
