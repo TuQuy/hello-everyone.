@@ -7088,3 +7088,38 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* Features Contact Data End */
 /* ------------------------------------------------*/
+
+/* ===== Custom overrides (2026-09) ===== */
+/* Headline: keep 2 lines on every screen, scale with viewport */
+.headline__title {
+  font-size: clamp(3.6rem, 7.4vw, 16rem);
+  white-space: nowrap;
+  line-height: 1.05;
+}
+/* Marquee image cards: fixed portrait frame, no background image behind the photo */
+.item.image {
+  background-image: none !important;
+  height: clamp(320px, 34vw, 560px);
+  width: auto;
+  aspect-ratio: 3 / 4;
+}
+.item.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Typography: avoid orphan words on the last line */
+h2, h3, h4 { text-wrap: balance; }
+p, .h2__text, .about-descr__text, .resume-lines__descr, .services-stack__text, .contact-data__item a { text-wrap: pretty; }
+/* h2 scales with viewport instead of jumping to 14rem on wide screens */
+h2 { font-size: clamp(3.6rem, 6.2vw, 14rem); line-height: 1.08; }
+/* Resume: job titles fit on fewer lines, more breathing room from the border */
+.resume-lines__title { font-size: clamp(2.2rem, 1.9vw, 3.2rem); line-height: 1.15; text-wrap: balance; }
+.resume-lines__item { padding: 3.2rem 0; }
+.resume-lines__descr { padding-top: 0.6rem; }
+/* Blockquote: balanced lines, no single-word last line */
+blockquote { text-wrap: balance; }
+/* "Welcome to my world!" stays on one line */
+.h2-oneline { white-space: nowrap; font-size: clamp(3rem, 4.8vw, 12rem); }
+/* Contact: 3 columns, address stays on 2 lines */
+.contact-data__item { padding-right: 3rem; }
